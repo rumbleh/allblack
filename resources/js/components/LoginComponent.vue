@@ -9,14 +9,20 @@
                 <div class="form-group has-feedback">
                     <label class="label">Informe o seu login</label>
                     <input type="text" class="form-control" autocomplete="off"
-                           name="login" placeholder="Ex: vitinho" v-model="input.login"/>
+                           name="login" placeholder="Ex: vitinho" v-model="username"/>
                 </div>
 
                 <div class="form-group has-feedback">
-                    <label class="label">Informe sua senha</label>
-                    <input type="password" class="form-control" autocomplete="off" name="senha"
-                           placeholder="Informe sua senha" v-model="input.senha"/>
+                    <label class="label">Informe sua password</label>
+                    <input type="password" class="form-control" autocomplete="off" name="password"
+                           placeholder="Informe sua password" v-model="password"/>
                 </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <span>{{ erro }}</span>
             </div>
         </div>
 
@@ -30,22 +36,27 @@
 
 <script>
     export default {
+        props : [
+            'action'
+        ],
         mounted() {
-            console.log('Component mounted.')
+           // console.log('Component mounted.')
         },
         data(){
             return {
-                input: {
-                    usuario: "",
-                    senha: ""
-                }
+                username: "",
+                password: "",
+                erro: ""
             }
         },
         methods: {
             login(){
-                axios.post("/auth", {usuario: this.usuario, senha: this.senha})
+                axios.post(this.action, {username: this.username, password: this.password})
                 .then(res => {
                     console.log(res)
+                })
+                .catch(error => {
+                    console.log(error.response.data.errors.username[0])
                 })
             }
         }

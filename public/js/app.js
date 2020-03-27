@@ -1971,25 +1971,32 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
-  mounted: function mounted() {
-    console.log('Component mounted.');
+  props: ['action'],
+  mounted: function mounted() {// console.log('Component mounted.')
   },
   data: function data() {
     return {
-      input: {
-        usuario: "",
-        senha: ""
-      }
+      username: "",
+      password: "",
+      erro: ""
     };
   },
   methods: {
     login: function login() {
-      axios.post("/auth", {
-        usuario: this.usuario,
-        senha: this.senha
+      axios.post(this.action, {
+        username: this.username,
+        password: this.password
       }).then(function (res) {
         console.log(res);
+      })["catch"](function (error) {
+        console.log(error.response.data.errors.username[0]);
       });
     }
   }
@@ -44090,8 +44097,8 @@ var render = function() {
               {
                 name: "model",
                 rawName: "v-model",
-                value: _vm.input.login,
-                expression: "input.login"
+                value: _vm.username,
+                expression: "username"
               }
             ],
             staticClass: "form-control",
@@ -44101,48 +44108,56 @@ var render = function() {
               name: "login",
               placeholder: "Ex: vitinho"
             },
-            domProps: { value: _vm.input.login },
+            domProps: { value: _vm.username },
             on: {
               input: function($event) {
                 if ($event.target.composing) {
                   return
                 }
-                _vm.$set(_vm.input, "login", $event.target.value)
+                _vm.username = $event.target.value
               }
             }
           })
         ]),
         _vm._v(" "),
         _c("div", { staticClass: "form-group has-feedback" }, [
-          _c("label", { staticClass: "label" }, [_vm._v("Informe sua senha")]),
+          _c("label", { staticClass: "label" }, [
+            _vm._v("Informe sua password")
+          ]),
           _vm._v(" "),
           _c("input", {
             directives: [
               {
                 name: "model",
                 rawName: "v-model",
-                value: _vm.input.senha,
-                expression: "input.senha"
+                value: _vm.password,
+                expression: "password"
               }
             ],
             staticClass: "form-control",
             attrs: {
               type: "password",
               autocomplete: "off",
-              name: "senha",
-              placeholder: "Informe sua senha"
+              name: "password",
+              placeholder: "Informe sua password"
             },
-            domProps: { value: _vm.input.senha },
+            domProps: { value: _vm.password },
             on: {
               input: function($event) {
                 if ($event.target.composing) {
                   return
                 }
-                _vm.$set(_vm.input, "senha", $event.target.value)
+                _vm.password = $event.target.value
               }
             }
           })
         ])
+      ])
+    ]),
+    _vm._v(" "),
+    _c("div", { staticClass: "row" }, [
+      _c("div", { staticClass: "col" }, [
+        _c("span", [_vm._v(_vm._s(_vm.erro))])
       ])
     ]),
     _vm._v(" "),
