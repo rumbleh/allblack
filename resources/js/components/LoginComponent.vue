@@ -20,15 +20,15 @@
             </div>
         </div>
 
-        <div class="row">
-            <div class="col">
-                <span>{{ erro }}</span>
+        <div class="row" v-if="this.erro != ''">
+            <div class="col-md-6 col-lg-5 mx-auto">
+                <span class="text-danger">{{ erro }}</span>
             </div>
         </div>
 
         <div class="row mb-3">
             <div class="col-md-6 offset-md-4 col-lg-5 col-xs-12 mx-auto ">
-                <button type="submit" class="btn btn-success btn-block" v-on:click="login">Entrar</button>
+                <button type="submit" class="btn btn-success btn-block" v-on:click="login"><span class="fa fa-save"></span> Entrar</button>
             </div>
         </div>
     </div>
@@ -56,7 +56,7 @@
                     console.log(res)
                 })
                 .catch(error => {
-                    console.log(error.response.data.errors.username[0])
+                    this.erro = error.response.data.errors.username[0]
                 })
             }
         }
