@@ -53,3 +53,4 @@ class RolesTableSeeder extends Seeder
         }
     }
 }
+a

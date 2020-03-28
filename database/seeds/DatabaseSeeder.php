@@ -20,6 +20,8 @@ class DatabaseSeeder extends Seeder
 //        $this->call(ConnectRelationshipsSeeder::class);
 //
 //        Model::reguard();
-        $this->call(SegmentoSeeder::class);
+//        $this->call(SegmentoSeeder::class);
+//        $this->call(ComunidadeSeeder::class);
+        $this->call(ProdutoSeeder::class);
     }
 }

@@ -1313,241 +1313,235 @@
       <Charset>utf8mb4</Charset>
       <DefaultForCharset>0</DefaultForCharset>
     </collation>
-    <table id="330" parent="2" name="failed_jobs">
+    <table id="330" parent="2" name="comunidades">
       <Collation>utf8_unicode_ci</Collation>
     </table>
-    <table id="331" parent="2" name="migrations">
+    <table id="331" parent="2" name="failed_jobs">
       <Collation>utf8_unicode_ci</Collation>
     </table>
-    <table id="332" parent="2" name="permission_role">
+    <table id="332" parent="2" name="migrations">
       <Collation>utf8_unicode_ci</Collation>
     </table>
-    <table id="333" parent="2" name="permission_user">
+    <table id="333" parent="2" name="permission_role">
       <Collation>utf8_unicode_ci</Collation>
     </table>
-    <table id="334" parent="2" name="permissions">
+    <table id="334" parent="2" name="permission_user">
       <Collation>utf8_unicode_ci</Collation>
     </table>
-    <table id="335" parent="2" name="role_user">
+    <table id="335" parent="2" name="permissions">
       <Collation>utf8_unicode_ci</Collation>
     </table>
-    <table id="336" parent="2" name="roles">
+    <table id="336" parent="2" name="produtos">
       <Collation>utf8_unicode_ci</Collation>
     </table>
-    <table id="337" parent="2" name="segmentos">
+    <table id="337" parent="2" name="role_user">
       <Collation>utf8_unicode_ci</Collation>
     </table>
-    <table id="338" parent="2" name="users">
+    <table id="338" parent="2" name="roles">
       <Collation>utf8_unicode_ci</Collation>
     </table>
-    <column id="339" parent="330" name="id">
+    <table id="339" parent="2" name="segmentos">
+      <Collation>utf8_unicode_ci</Collation>
+    </table>
+    <table id="340" parent="2" name="users">
+      <Collation>utf8_unicode_ci</Collation>
+    </table>
+    <column id="341" parent="330" name="id">
       <Position>1</Position>
       <DataType>bigint(20) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="340" parent="330" name="connection">
+    <column id="342" parent="330" name="nome">
+      <Position>2</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="343" parent="330" name="created_at">
+      <Position>3</Position>
+      <DataType>timestamp|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="344" parent="330" name="updated_at">
+      <Position>4</Position>
+      <DataType>timestamp|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="345" parent="330" name="deleted_at">
+      <Position>5</Position>
+      <DataType>timestamp|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="346" parent="330" name="comunidades_nome_unique">
+      <ColNames>nome</ColNames>
+      <Unique>1</Unique>
+      <Type>btree</Type>
+    </index>
+    <key id="347" parent="330" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <key id="348" parent="330" name="comunidades_nome_unique">
+      <ColNames>nome</ColNames>
+      <UnderlyingIndexName>comunidades_nome_unique</UnderlyingIndexName>
+    </key>
+    <column id="349" parent="331" name="id">
+      <Position>1</Position>
+      <DataType>bigint(20) unsigned|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="350" parent="331" name="connection">
       <Position>2</Position>
       <DataType>text|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="341" parent="330" name="queue">
+    <column id="351" parent="331" name="queue">
       <Position>3</Position>
       <DataType>text|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="342" parent="330" name="payload">
+    <column id="352" parent="331" name="payload">
       <Position>4</Position>
       <DataType>longtext|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="343" parent="330" name="exception">
+    <column id="353" parent="331" name="exception">
       <Position>5</Position>
       <DataType>longtext|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="344" parent="330" name="failed_at">
+    <column id="354" parent="331" name="failed_at">
       <Position>6</Position>
       <DataType>timestamp|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>current_timestamp()</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="345" parent="330" name="PRIMARY">
+    <key id="355" parent="331" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="346" parent="331" name="id">
+    <column id="356" parent="332" name="id">
       <Position>1</Position>
       <DataType>int(10) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="347" parent="331" name="migration">
+    <column id="357" parent="332" name="migration">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="348" parent="331" name="batch">
+    <column id="358" parent="332" name="batch">
       <Position>3</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="349" parent="331" name="PRIMARY">
+    <key id="359" parent="332" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="350" parent="332" name="id">
+    <column id="360" parent="333" name="id">
       <Position>1</Position>
       <DataType>int(10) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="351" parent="332" name="permission_id">
+    <column id="361" parent="333" name="permission_id">
       <Position>2</Position>
       <DataType>int(10) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="352" parent="332" name="role_id">
+    <column id="362" parent="333" name="role_id">
       <Position>3</Position>
       <DataType>int(10) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="353" parent="332" name="created_at">
+    <column id="363" parent="333" name="created_at">
       <Position>4</Position>
       <DataType>timestamp|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="354" parent="332" name="updated_at">
+    <column id="364" parent="333" name="updated_at">
       <Position>5</Position>
       <DataType>timestamp|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="355" parent="332" name="deleted_at">
+    <column id="365" parent="333" name="deleted_at">
       <Position>6</Position>
       <DataType>timestamp|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="356" parent="332" name="permission_role_permission_id_index">
+    <index id="366" parent="333" name="permission_role_permission_id_index">
       <ColNames>permission_id</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="357" parent="332" name="permission_role_role_id_index">
+    <index id="367" parent="333" name="permission_role_role_id_index">
       <ColNames>role_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="358" parent="332" name="PRIMARY">
+    <key id="368" parent="333" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="359" parent="333" name="id">
+    <column id="369" parent="334" name="id">
       <Position>1</Position>
       <DataType>int(10) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="360" parent="333" name="permission_id">
+    <column id="370" parent="334" name="permission_id">
       <Position>2</Position>
       <DataType>int(10) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="361" parent="333" name="user_id">
+    <column id="371" parent="334" name="user_id">
       <Position>3</Position>
       <DataType>bigint(20) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="362" parent="333" name="created_at">
+    <column id="372" parent="334" name="created_at">
       <Position>4</Position>
       <DataType>timestamp|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="363" parent="333" name="updated_at">
+    <column id="373" parent="334" name="updated_at">
       <Position>5</Position>
       <DataType>timestamp|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="364" parent="333" name="deleted_at">
+    <column id="374" parent="334" name="deleted_at">
       <Position>6</Position>
       <DataType>timestamp|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="365" parent="333" name="permission_user_permission_id_index">
+    <index id="375" parent="334" name="permission_user_permission_id_index">
       <ColNames>permission_id</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="366" parent="333" name="permission_user_user_id_index">
+    <index id="376" parent="334" name="permission_user_user_id_index">
       <ColNames>user_id</ColNames>
-      <Type>btree</Type>
-    </index>
-    <key id="367" parent="333" name="PRIMARY">
-      <NameSurrogate>1</NameSurrogate>
-      <ColNames>id</ColNames>
-      <Primary>1</Primary>
-    </key>
-    <column id="368" parent="334" name="id">
-      <Position>1</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <NotNull>1</NotNull>
-      <SequenceIdentity>1</SequenceIdentity>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="369" parent="334" name="name">
-      <Position>2</Position>
-      <DataType>varchar(255)|0s</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="370" parent="334" name="slug">
-      <Position>3</Position>
-      <DataType>varchar(255)|0s</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="371" parent="334" name="description">
-      <Position>4</Position>
-      <DataType>varchar(255)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="372" parent="334" name="model">
-      <Position>5</Position>
-      <DataType>varchar(255)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="373" parent="334" name="created_at">
-      <Position>6</Position>
-      <DataType>timestamp|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="374" parent="334" name="updated_at">
-      <Position>7</Position>
-      <DataType>timestamp|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="375" parent="334" name="deleted_at">
-      <Position>8</Position>
-      <DataType>timestamp|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <index id="376" parent="334" name="permissions_slug_unique">
-      <ColNames>slug</ColNames>
-      <Unique>1</Unique>
       <Type>btree</Type>
     </index>
     <key id="377" parent="334" name="PRIMARY">
@@ -1555,50 +1549,53 @@
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="378" parent="334" name="permissions_slug_unique">
-      <ColNames>slug</ColNames>
-      <UnderlyingIndexName>permissions_slug_unique</UnderlyingIndexName>
-    </key>
-    <column id="379" parent="335" name="id">
+    <column id="378" parent="335" name="id">
       <Position>1</Position>
       <DataType>int(10) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="380" parent="335" name="role_id">
+    <column id="379" parent="335" name="name">
       <Position>2</Position>
-      <DataType>int(10) unsigned|0s</DataType>
+      <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="381" parent="335" name="user_id">
+    <column id="380" parent="335" name="slug">
       <Position>3</Position>
-      <DataType>bigint(20) unsigned|0s</DataType>
+      <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="382" parent="335" name="created_at">
+    <column id="381" parent="335" name="description">
       <Position>4</Position>
-      <DataType>timestamp|0s</DataType>
+      <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="383" parent="335" name="updated_at">
+    <column id="382" parent="335" name="model">
       <Position>5</Position>
-      <DataType>timestamp|0s</DataType>
+      <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="384" parent="335" name="deleted_at">
+    <column id="383" parent="335" name="created_at">
       <Position>6</Position>
       <DataType>timestamp|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="385" parent="335" name="role_user_role_id_index">
-      <ColNames>role_id</ColNames>
-      <Type>btree</Type>
-    </index>
-    <index id="386" parent="335" name="role_user_user_id_index">
-      <ColNames>user_id</ColNames>
+    <column id="384" parent="335" name="updated_at">
+      <Position>7</Position>
+      <DataType>timestamp|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="385" parent="335" name="deleted_at">
+      <Position>8</Position>
+      <DataType>timestamp|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="386" parent="335" name="permissions_slug_unique">
+      <ColNames>slug</ColNames>
+      <Unique>1</Unique>
       <Type>btree</Type>
     </index>
     <key id="387" parent="335" name="PRIMARY">
@@ -1606,111 +1603,111 @@
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="388" parent="336" name="id">
+    <key id="388" parent="335" name="permissions_slug_unique">
+      <ColNames>slug</ColNames>
+      <UnderlyingIndexName>permissions_slug_unique</UnderlyingIndexName>
+    </key>
+    <column id="389" parent="336" name="id">
       <Position>1</Position>
-      <DataType>int(10) unsigned|0s</DataType>
+      <DataType>bigint(20) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="389" parent="336" name="name">
+    <column id="390" parent="336" name="nome">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="390" parent="336" name="slug">
+    <column id="391" parent="336" name="custo">
       <Position>3</Position>
-      <DataType>varchar(255)|0s</DataType>
+      <DataType>decimal(8,2 digit)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="391" parent="336" name="description">
+    <column id="392" parent="336" name="fator">
       <Position>4</Position>
-      <DataType>varchar(255)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="392" parent="336" name="level">
-      <Position>5</Position>
-      <DataType>int(11)|0s</DataType>
+      <DataType>decimal(8,2 digit)|0s</DataType>
       <NotNull>1</NotNull>
-      <DefaultExpression>1</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="393" parent="336" name="created_at">
+    <column id="393" parent="336" name="foto">
+      <Position>5</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="394" parent="336" name="created_at">
       <Position>6</Position>
       <DataType>timestamp|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="394" parent="336" name="updated_at">
+    <column id="395" parent="336" name="updated_at">
       <Position>7</Position>
       <DataType>timestamp|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="395" parent="336" name="deleted_at">
+    <column id="396" parent="336" name="deleted_at">
       <Position>8</Position>
       <DataType>timestamp|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="396" parent="336" name="roles_slug_unique">
-      <ColNames>slug</ColNames>
-      <Unique>1</Unique>
-      <Type>btree</Type>
-    </index>
     <key id="397" parent="336" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="398" parent="336" name="roles_slug_unique">
-      <ColNames>slug</ColNames>
-      <UnderlyingIndexName>roles_slug_unique</UnderlyingIndexName>
-    </key>
-    <column id="399" parent="337" name="id">
+    <column id="398" parent="337" name="id">
       <Position>1</Position>
       <DataType>int(10) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="400" parent="337" name="descricao">
+    <column id="399" parent="337" name="role_id">
       <Position>2</Position>
-      <DataType>varchar(255)|0s</DataType>
+      <DataType>int(10) unsigned|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="400" parent="337" name="user_id">
+      <Position>3</Position>
+      <DataType>bigint(20) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
     <column id="401" parent="337" name="created_at">
-      <Position>3</Position>
-      <DataType>timestamp|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="402" parent="337" name="updated_at">
       <Position>4</Position>
       <DataType>timestamp|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="403" parent="337" name="deleted_at">
+    <column id="402" parent="337" name="updated_at">
       <Position>5</Position>
       <DataType>timestamp|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="404" parent="337" name="segmentos_descricao_unique">
-      <ColNames>descricao</ColNames>
-      <Unique>1</Unique>
+    <column id="403" parent="337" name="deleted_at">
+      <Position>6</Position>
+      <DataType>timestamp|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="404" parent="337" name="role_user_role_id_index">
+      <ColNames>role_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="405" parent="337" name="PRIMARY">
+    <index id="405" parent="337" name="role_user_user_id_index">
+      <ColNames>user_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="406" parent="337" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="406" parent="337" name="segmentos_descricao_unique">
-      <ColNames>descricao</ColNames>
-      <UnderlyingIndexName>segmentos_descricao_unique</UnderlyingIndexName>
-    </key>
     <column id="407" parent="338" name="id">
       <Position>1</Position>
-      <DataType>bigint(20) unsigned|0s</DataType>
+      <DataType>int(10) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
@@ -1721,21 +1718,22 @@
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="409" parent="338" name="username">
+    <column id="409" parent="338" name="slug">
       <Position>3</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="410" parent="338" name="password">
+    <column id="410" parent="338" name="description">
       <Position>4</Position>
       <DataType>varchar(255)|0s</DataType>
-      <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="411" parent="338" name="remember_token">
+    <column id="411" parent="338" name="level">
       <Position>5</Position>
-      <DataType>varchar(100)|0s</DataType>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>1</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
     <column id="412" parent="338" name="created_at">
@@ -1748,17 +1746,118 @@
       <DataType>timestamp|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="414" parent="338" name="users_username_unique">
-      <ColNames>username</ColNames>
+    <column id="414" parent="338" name="deleted_at">
+      <Position>8</Position>
+      <DataType>timestamp|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="415" parent="338" name="roles_slug_unique">
+      <ColNames>slug</ColNames>
       <Unique>1</Unique>
       <Type>btree</Type>
     </index>
-    <key id="415" parent="338" name="PRIMARY">
+    <key id="416" parent="338" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="416" parent="338" name="users_username_unique">
+    <key id="417" parent="338" name="roles_slug_unique">
+      <ColNames>slug</ColNames>
+      <UnderlyingIndexName>roles_slug_unique</UnderlyingIndexName>
+    </key>
+    <column id="418" parent="339" name="id">
+      <Position>1</Position>
+      <DataType>int(10) unsigned|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="419" parent="339" name="descricao">
+      <Position>2</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="420" parent="339" name="created_at">
+      <Position>3</Position>
+      <DataType>timestamp|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="421" parent="339" name="updated_at">
+      <Position>4</Position>
+      <DataType>timestamp|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="422" parent="339" name="deleted_at">
+      <Position>5</Position>
+      <DataType>timestamp|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="423" parent="339" name="segmentos_descricao_unique">
+      <ColNames>descricao</ColNames>
+      <Unique>1</Unique>
+      <Type>btree</Type>
+    </index>
+    <key id="424" parent="339" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <key id="425" parent="339" name="segmentos_descricao_unique">
+      <ColNames>descricao</ColNames>
+      <UnderlyingIndexName>segmentos_descricao_unique</UnderlyingIndexName>
+    </key>
+    <column id="426" parent="340" name="id">
+      <Position>1</Position>
+      <DataType>bigint(20) unsigned|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="427" parent="340" name="name">
+      <Position>2</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="428" parent="340" name="username">
+      <Position>3</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="429" parent="340" name="password">
+      <Position>4</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="430" parent="340" name="remember_token">
+      <Position>5</Position>
+      <DataType>varchar(100)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="431" parent="340" name="created_at">
+      <Position>6</Position>
+      <DataType>timestamp|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="432" parent="340" name="updated_at">
+      <Position>7</Position>
+      <DataType>timestamp|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="433" parent="340" name="users_username_unique">
+      <ColNames>username</ColNames>
+      <Unique>1</Unique>
+      <Type>btree</Type>
+    </index>
+    <key id="434" parent="340" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <key id="435" parent="340" name="users_username_unique">
       <ColNames>username</ColNames>
       <UnderlyingIndexName>users_username_unique</UnderlyingIndexName>
     </key>
