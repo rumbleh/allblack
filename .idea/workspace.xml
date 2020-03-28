@@ -2,14 +2,37 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="23ded136-523a-4f84-a553-94451d9256f7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/js/fontawesome.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Comunidade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/ComunidadeController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/SegmentoController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Segmento.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/factories/ComunidadeFactory.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/factories/SegmentoFactory.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_03_28_011433_create_segmentos_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_03_28_134656_create_comunidades_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/seeds/ComunidadeSeeder.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/seeds/SegmentoSeeder.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/components/AdminTopMenu.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/allblack.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/allblack.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/35850b4a-7bcf-4d76-9ba3-96463cedef1a.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/35850b4a-7bcf-4d76-9ba3-96463cedef1a.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/bootstrap.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/DashboardAdmin.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/DashboardAdmin.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/components/LoginComponent.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/LoginComponent.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/dashboard.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack.mix.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.mix.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,6 +79,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaScript File" />
+        <option value="Vue Single File Component" />
       </list>
     </option>
   </component>
@@ -165,6 +189,7 @@
       <path value="$PROJECT_DIR$/vendor/laravel/helpers" />
       <path value="$PROJECT_DIR$/vendor/jeremykenedy/laravel-roles" />
       <path value="$PROJECT_DIR$/vendor/eklundkristoffer/seedster" />
+      <path value="$PROJECT_DIR$/vendor/lucascudo/laravel-pt-br-localization" />
     </include_path>
   </component>
   <component name="ProjectId" id="1ZifTPQHPPYnTGIeTZmIDPDRD5D" />
@@ -182,14 +207,18 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/dashboard" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\wamp64v2\www\allblack\resources\views\auth" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\wamp64v2\www\allblack\resources\views\dashboard" />
       <recent name="C:\wamp64v2\www\allblack\resources\js\components" />
     </key>
   </component>
@@ -198,6 +227,33 @@
       <TestRunner scope="XML" />
       <method v="2" />
     </configuration>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="root:allblack@localhost" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="root:allblack@localhost" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="com.intellij.database.console.session.MessageBusSession@1188e3" type="9fbbdea:ServiceModel$ServiceNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="root:allblack@localhost" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="com.intellij.database.console.session.MessageBusSession@27a4901d" type="9fbbdea:ServiceModel$ServiceNode" />
+              </path>
+            </expand>
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -209,7 +265,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1585326841629</updated>
-      <workItem from="1585326850125" duration="13538000" />
+      <workItem from="1585326850125" duration="24307000" />
     </task>
     <servers />
   </component>
@@ -228,14 +284,40 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="463" y="124" key="FileChooserDialogImpl/0.0.1366.738/0.-768.1360.738@0.0.1366.738" timestamp="1585333852291" />
+    <state width="905" height="174" key="GridCell.Tab.0.bottom" timestamp="1585359886826">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state width="905" height="174" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1585359886826" />
+    <state width="905" height="174" key="GridCell.Tab.0.center" timestamp="1585359886826">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state width="905" height="174" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1585359886826" />
+    <state width="905" height="174" key="GridCell.Tab.0.left" timestamp="1585359886825">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state width="905" height="174" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1585359886825" />
+    <state width="905" height="174" key="GridCell.Tab.0.right" timestamp="1585359886826">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state width="905" height="174" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1585359886826" />
     <state x="263" y="24" key="com.intellij.database.dbimport.ImportDialog" timestamp="1585334631870">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="263" y="24" key="com.intellij.database.dbimport.ImportDialog/0.0.1366.738/0.-768.1360.738@0.0.1366.738" timestamp="1585334631870" />
-    <state x="380" y="101" width="606" height="536" key="find.popup" timestamp="1585343120352">
+    <state x="392" y="11" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1585359732889">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="380" y="101" width="606" height="536" key="find.popup/0.0.1366.738/0.-768.1360.738@0.0.1366.738" timestamp="1585343120352" />
+    <state x="392" y="11" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.1366.738@0.0.1366.738" timestamp="1585359732889" />
+    <state x="492" y="286" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1585357607811">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="492" y="286" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.738/0.-768.1360.738@0.0.1366.738" timestamp="1585347127857" />
+    <state x="492" y="286" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.738@0.0.1366.738" timestamp="1585357607811" />
+    <state x="380" y="101" width="606" height="536" key="find.popup" timestamp="1585358915421">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="380" y="101" width="606" height="536" key="find.popup/0.0.1366.738/0.-768.1360.738@0.0.1366.738" timestamp="1585345611548" />
+    <state x="380" y="101" width="606" height="536" key="find.popup/0.0.1366.738@0.0.1366.738" timestamp="1585358915421" />
     <state x="346" y="59" width="672" height="678" key="search.everywhere.popup" timestamp="1585339260899">
       <screen x="0" y="0" width="1366" height="738" />
     </state>

@@ -13,7 +13,7 @@
                 </div>
 
                 <div class="form-group has-feedback">
-                    <label class="label">Informe sua password</label>
+                    <label class="label">Informe sua senha</label>
                     <input type="password" class="form-control" autocomplete="off" name="password"
                            placeholder="Informe sua password" v-model="password"/>
                 </div>
@@ -40,7 +40,6 @@
             'action'
         ],
         mounted() {
-           // console.log('Component mounted.')
         },
         data(){
             return {
@@ -53,7 +52,7 @@
             login(){
                 axios.post(this.action, {username: this.username, password: this.password})
                 .then(res => {
-                    console.log(res)
+                    location.href = '/public/home'
                 })
                 .catch(error => {
                     this.erro = error.response.data.errors.username[0]

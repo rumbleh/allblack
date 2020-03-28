@@ -11,6 +11,6 @@ class ComunidadeSeeder extends Seeder
      */
     public function run()
     {
-        //
+        factory(App\Comunidade::class, 10)->create();
     }
 }

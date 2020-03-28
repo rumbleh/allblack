@@ -15,7 +15,9 @@ class CreateComunidadesTable extends Migration
     {
         Schema::create('comunidades', function (Blueprint $table) {
             $table->id();
+            $table->string('nome')->unique();
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

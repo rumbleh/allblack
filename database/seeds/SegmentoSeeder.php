@@ -11,6 +11,6 @@ class SegmentoSeeder extends Seeder
      */
     public function run()
     {
-        //
+        factory(App\Segmento::class, 5)->create();
     }
 }

@@ -14,7 +14,7 @@
                         </div>
                     @endif
 
-                    You are logged in!
+                    Meus pedidos
                 </div>
             </div>
         </div>

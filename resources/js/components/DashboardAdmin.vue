@@ -1,37 +1,59 @@
 <template>
-    <div class="container">
-        <div class="mx-auto mt-5 text-center">
-            <h5>ALL<strong>BLACK</strong></h5>
-        </div>
+        <div class="content">
+            <div class="container">
+                <h5 class="mb-2"></h5>
+                <div class="row">
 
-        <div class="row">
-            <div class="col-md-6 col-lg-5 mx-auto">
-                <div class="form-group has-feedback">
-                    <label class="label">Informe o seu login</label>
-                    <input type="text" class="form-control" autocomplete="off"
-                           name="login" placeholder="Ex: vitinho" v-model="username"/>
+                    <!-- /.col -->
+                    <div class="col-md-6 col-sm-6 col-12">
+                        <a href=" BASE /comunidade/incluir">
+                            <div class="info-box">
+                                <span class="info-box-icon bg-gradient-warning"><i class="fa fa-map-signs"></i></span>
+
+                                <div class="info-box-content">
+                                    <span class="info-box-text">Nova comunidade</span>
+                                    <span class="info-box-number"></span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-md-6 col-sm-6 col-12">
+                        <a href="  @BASE /representante/incluir">
+                            <div class="info-box">
+                                <span class="info-box-icon bg-gradient-danger"><i class="fa fa-user-plus"></i></span>
+                                <div class="info-box-content">
+                                    <span class="info-box-text">Novo representante</span>
+                                    <span class="info-box-number"></span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-md-6 col-sm-6 col-12">
+                        <a href="@BASE/dashboard/pedidos/pendentes">
+                            <div class="info-box">
+                                <span class="info-box-icon bg-gradient-info"><i class="fa fa-clock"></i></span>
+                                <div class="info-box-content">
+                                    <span class="info-box-text">Pedidos pendentes</span>
+                                    <span class="info-box-number">@pendentes</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-12">
+                        <div class="info-box">
+                            <span class="info-box-icon bg-gradient-success"><i class="fa fa-boxes"></i></span>
+
+                            <div class="info-box-content">
+                                <span class="info-box-text">Estoque mínimo</span>
+                                <span class="info-box-number">2</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-
-                <div class="form-group has-feedback">
-                    <label class="label">Informe sua senha</label>
-                    <input type="password" class="form-control" autocomplete="off" name="password"
-                           placeholder="Informe sua password" v-model="password"/>
-                </div>
             </div>
         </div>
-
-        <div class="row" v-if="this.erro != ''">
-            <div class="col-md-6 col-lg-5 mx-auto">
-                <span class="text-danger">{{ erro }}</span>
-            </div>
-        </div>
-
-        <div class="row mb-3">
-            <div class="col-md-6 offset-md-4 col-lg-5 col-xs-12 mx-auto ">
-                <button type="submit" class="btn btn-success btn-block" v-on:click="login"><span class="fa fa-save"></span> Entrar</button>
-            </div>
-        </div>
-    </div>
 </template>
 
 <script>

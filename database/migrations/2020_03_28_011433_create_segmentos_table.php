@@ -14,8 +14,10 @@ class CreateSegmentosTable extends Migration
     public function up()
     {
         Schema::create('segmentos', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id');
+            $table->string('descricao')->unique();
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
