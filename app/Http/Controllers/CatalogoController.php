@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Segmento;
+use App\Catalogo;
 use Illuminate\Http\Request;
 
-class SegmentoController extends Controller
+class CatalogoController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +14,7 @@ class SegmentoController extends Controller
      */
     public function index()
     {
-        $segmento = Segmento::findOrFail(2);
-        dd($segmento);
+        //
     }
 
     /**
@@ -42,10 +41,10 @@ class SegmentoController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Segmento  $segmento
+     * @param  \App\Catalogo  $catalogo
      * @return \Illuminate\Http\Response
      */
-    public function show(Segmento $segmento)
+    public function show(Catalogo $catalogo)
     {
         //
     }
@@ -53,10 +52,10 @@ class SegmentoController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Segmento  $segmento
+     * @param  \App\Catalogo  $catalogo
      * @return \Illuminate\Http\Response
      */
-    public function edit(Segmento $segmento)
+    public function edit(Catalogo $catalogo)
     {
         //
     }
@@ -65,10 +64,10 @@ class SegmentoController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Segmento  $segmento
+     * @param  \App\Catalogo  $catalogo
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Segmento $segmento)
+    public function update(Request $request, Catalogo $catalogo)
     {
         //
     }
@@ -76,10 +75,10 @@ class SegmentoController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Segmento  $segmento
+     * @param  \App\Catalogo  $catalogo
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Segmento $segmento)
+    public function destroy(Catalogo $catalogo)
     {
         //
     }

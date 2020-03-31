@@ -30,3 +30,6 @@ Route::get('/home', function() {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+# Rotas do administrador
+Route::get('/segmentos', 'SegmentoController@index')->name('segmentos');

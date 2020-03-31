@@ -2,22 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="23ded136-523a-4f84-a553-94451d9256f7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/ProdutoController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Produto.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/factories/ProdutoFactory.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_03_28_135858_create_produtos_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/seeds/ProdutoSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/35850b4a-7bcf-4d76-9ba3-96463cedef1a.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/35850b4a-7bcf-4d76-9ba3-96463cedef1a.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Catalogo.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/CatalogoController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/factories/CatalogoFactory.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_03_29_010550_create_catalogos_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/seeds/CatalogoSeeder.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/RolesTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/RolesTableSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/SegmentoController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/SegmentoController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution>
       <executable />
@@ -49,13 +48,6 @@
         <item name="allblack@localhost" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="allblack: schema" type="ebfa3cd1:MariaImplModel$Schema" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="allblack@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="allblack: schema" type="ebfa3cd1:MariaImplModel$Schema" />
-        <item name="produtos: table" type="dbc44a63:MariaImplModel$Table" />
       </path>
     </expand>
     <select />
@@ -197,6 +189,7 @@
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="Laravel.SettingsForm" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -245,7 +238,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1585326841629</updated>
-      <workItem from="1585326850125" duration="30742000" />
+      <workItem from="1585326850125" duration="35823000" />
+      <workItem from="1585641226407" duration="741000" />
     </task>
     <servers />
   </component>
@@ -260,6 +254,10 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="275" y="28" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.738/0.-768.1360.738@0.0.1366.738" timestamp="1585332392412" />
+    <state x="308" y="0" key="CommitChangelistDialog2" timestamp="1585437643275">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="308" y="0" key="CommitChangelistDialog2/0.0.1366.738/0.-768.1360.738@0.0.1366.738" timestamp="1585437643275" />
     <state x="463" y="124" key="FileChooserDialogImpl" timestamp="1585333852291">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
@@ -284,15 +282,23 @@
     </state>
     <state width="905" height="174" key="GridCell.Tab.0.right/0.0.1366.738/0.-768.1360.738@0.0.1366.738" timestamp="1585436095065" />
     <state width="905" height="174" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1585435787302" />
-    <state x="263" y="24" key="com.intellij.database.dbimport.ImportDialog" timestamp="1585434693038">
+    <state x="184" y="12" key="SettingsEditor" timestamp="1585642052892">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="263" y="24" key="com.intellij.database.dbimport.ImportDialog/0.0.1366.738/0.-768.1360.738@0.0.1366.738" timestamp="1585334631870" />
+    <state x="184" y="12" key="SettingsEditor/0.0.1366.738@0.0.1366.738" timestamp="1585642052892" />
+    <state x="263" y="24" key="com.intellij.database.dbimport.ImportDialog" timestamp="1585443901571">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="263" y="24" key="com.intellij.database.dbimport.ImportDialog/0.0.1366.738/0.-768.1360.738@0.0.1366.738" timestamp="1585443901571" />
     <state x="263" y="24" key="com.intellij.database.dbimport.ImportDialog/0.0.1366.738@0.0.1366.738" timestamp="1585434693038" />
     <state x="392" y="11" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1585359732889">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="392" y="11" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.1366.738@0.0.1366.738" timestamp="1585359732889" />
+    <state x="378" y="193" key="com.intellij.ide.util.TipDialog" timestamp="1585641237155">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="378" y="193" key="com.intellij.ide.util.TipDialog/0.0.1366.738@0.0.1366.738" timestamp="1585641237155" />
     <state x="492" y="286" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1585357607811">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
