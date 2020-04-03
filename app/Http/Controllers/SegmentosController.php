@@ -2,11 +2,16 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\SegmentoStoreRequest;
+use App\Http\Resources\Segmento as SegmentoResource;
 use App\Segmento;
 use Illuminate\Http\Request;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class SegmentoController extends Controller
 {
+    use SoftDeletes;
+
     /**
      * Display a listing of the resource.
      *
@@ -14,8 +19,15 @@ class SegmentoController extends Controller
      */
     public function index()
     {
-        $segmento = Segmento::findOrFail(2);
-        dd($segmento);
+        $segmentos = Segmento::all();
+        $seg = SegmentoResource::make($segmentos);
+        return view('dashboard/admin/segmento/index')
+            ->with('segmentos', $segmentos);
+//        return response(Segmento::all()->toJson(), 200);
+//        $segmentos = Segmento::withTrashed()->get();
+
+//        return response($segmentos, 200);
+//        return Segmento::all()->pluck('descricao', 'id')->toJson();
     }
 
     /**
@@ -34,9 +46,11 @@ class SegmentoController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(SegmentoStoreRequest $request)
     {
-        //
+        $dados = $request->all();
+        $segmento = Segmento::create($dados);
+        return response($segmento, 200);
     }
 
     /**
@@ -68,9 +82,10 @@ class SegmentoController extends Controller
      * @param  \App\Segmento  $segmento
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Segmento $segmento)
+    public function update(SegmentoStoreRequest $request, Segmento $segmento)
     {
-        //
+        $segmento->update($request->all());
+        return response($segmento->toJson(), 200);
     }
 
     /**
@@ -81,6 +96,8 @@ class SegmentoController extends Controller
      */
     public function destroy(Segmento $segmento)
     {
-        //
+        $segmento->delete();
+        return response($segmento->toJson(), 200);
     }
+
 }
