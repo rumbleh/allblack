@@ -11,6 +11,6 @@ class CatalogoSeeder extends Seeder
      */
     public function run()
     {
-        //
+        factory(App\ProdutoComunidade::class, 10)->create();
     }
 }

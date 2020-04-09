@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Catalogo;
+use App\CatalogoComunidade;
 use Illuminate\Http\Request;
+use App\Http\Resources\CatalogosResource;
 
 class CatalogoController extends Controller
 {
@@ -12,9 +13,14 @@ class CatalogoController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function api_v1_catalogo_index()
     {
-        //
+        $catalogo = CatalogoComunidade::where('comunidade_id', '=', '1');
+        dd($catalogo);
+//        $catalogo = CatalogoComunidade::with('comunidade')->get();
+//        dd($catalogo->comunidade);
+//        dd($catalogo->comunidade);
+        return response(CatalogosResource::collection($catalogo)->toJson(), 200);
     }
 
     /**
@@ -41,21 +47,21 @@ class CatalogoController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Catalogo  $catalogo
+     * @param  \App\CatalogoComunidade  $catalogo
      * @return \Illuminate\Http\Response
      */
-    public function show(Catalogo $catalogo)
+    public function show(CatalogoComunidade $catalogo)
     {
-        //
+
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Catalogo  $catalogo
+     * @param  \App\CatalogoComunidade  $catalogo
      * @return \Illuminate\Http\Response
      */
-    public function edit(Catalogo $catalogo)
+    public function edit(CatalogoComunidade $catalogo)
     {
         //
     }
@@ -64,10 +70,10 @@ class CatalogoController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Catalogo  $catalogo
+     * @param  \App\CatalogoComunidade  $catalogo
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Catalogo $catalogo)
+    public function update(Request $request, CatalogoComunidade $catalogo)
     {
         //
     }
@@ -75,10 +81,10 @@ class CatalogoController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Catalogo  $catalogo
+     * @param  \App\CatalogoComunidade  $catalogo
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Catalogo $catalogo)
+    public function destroy(CatalogoComunidade $catalogo)
     {
         //
     }

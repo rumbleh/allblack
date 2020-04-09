@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateCatalogosTable extends Migration
+class CreateComunidadeProdutoTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,12 @@ class CreateCatalogosTable extends Migration
      */
     public function up()
     {
-        Schema::create('catalogos', function (Blueprint $table) {
-            $table->integer('produto_id');
+        Schema::create('comunidade_produto', function (Blueprint $table) {
             $table->integer('comunidade_id');
+            $table->integer('produto_id');
+            $table->integer('estoque');
             $table->decimal('preco');
+            $table->decimal('comissao');
             $table->foreign('produto_id')
                 ->references('id')
                 ->on("produtos");
@@ -34,6 +36,6 @@ class CreateCatalogosTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('catalogos');
+        Schema::dropIfExists('produto_comunidade');
     }
 }
